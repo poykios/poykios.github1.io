@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Samuli">
+    <title>Kuvagalleria</title>
+    
+    <style>
+        :root {
+            --text-color: #333;
+            --background-color: lightblue;
+        }
+
+        body {
+            color: var(--text-color);
+            background-color: var(--background-color);
+            font-family: "Lucida Grande", sans-serif;
+            margin: 0;
+            padding: 10px; 
+        }
+
+        h1 {
+            background-color: white;
+            text-align: center;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px auto 30px auto;
+            width: fit-content;
+            font-size: clamp(1.5rem, 6vw, 3rem);
+        }
+
+        .galleria-osio {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            padding: 10px;
+        }
+
+        img {
+            max-width: 400px; 
+            width: 100%;    
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        p {
+            background-color: white;
+            text-align: center;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 0;
+            max-width: 400px;
+        }
+
+        
+        @media only screen and (min-width: 768px) {
+            .galleria-osio {
+                flex-direction: row;
+                justify-content: center;
+            }
+            
+            .galleria-osio:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Urbaanit</h1>
+
+    <div class="galleria-osio">
+        <img src="torni.jpg" width="300" height="300" alt="Ilves vs KalPa">
+        <p>Tampereen tornihotellista on kauniit näkymät koko kaupungin ylle</p>
+    </div>
+
+    <div class="galleria-osio">
+        <img src="maisematausta.jpg" width="300" height="300" alt="HIFK peli">
+        <p>Huopalahdentien pohjoispää sumuisena ja pimeänä iltana</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Samuli">
+    <title>Kuvagalleria</title>
+    
+    <style>
+        :root {
+            --text-color: #333;
+            --background-color: lightblue;
+            --white: rgba(255, 255, 255, 0.9);
+        }
+
+        body {
+            color: var(--text-color);
+            background-color: var(--background-color);
+            font-family: "Lucida Grande", sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 60vh; 
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        .video-container h1 {
+            background-color: black;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: clamp(1.8rem, 8vw, 4rem);
+            margin-top: 170px;
+        }
+
+        .video-container img {
+            max-width: 120px;
+            filter: drop-shadow(2px 4px 6px black);
+            position: absolute;
+            margin-bottom: 150px;
+        }
+
+    
+        .intro {
+            margin: 20px;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            font-style: italic;
+            font-size: 40px;
+        }
+
+    
+        footer {
+            padding: 20px;
+        }
+
+        #sivunavigointi {
+            display: grid;
+            grid-template-columns: 1fr; 
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-kortti {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .nav-kortti:hover {
+            transform: translateY(-5px);
+            background: white;
+        }
+
+        .nav-kortti h2 {
+            margin-top: 0;
+            color: black;
+text-decoration: none;        }
+
+    
+        @media only screen and (min-width: 768px) {
+            #sivunavigointi {
+                grid-template-columns: repeat(2, 1fr); 
+            }
+        }
+
+        @media only screen and (min-width: 1024px) {
+            #sivunavigointi {
+                grid-template-columns: repeat(3, 1fr); 
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+  <header class="video-container">
+    <video autoplay muted loop playsinline>
+      <source src="lehti.mp4" type="video/mp4">
+      Selaimesi ei tue videota.
+    </video>
+    <h1>Kuvagalleria</h1>
+    <img src="OmaLogo.png" alt="Oma logo">
+  </header>
+
+  <main>
+    <div class="intro">
+      <p>Helsingin hienoimmat kuvat löytyvät juuri täältä. Etsit sitten kuvausapua, julisteita tai halusit muuten vain ihastella visuaalista sisältöä, olet oikeassa paikassa.</p>
+    </div>
+  </main>
+
+  <footer>
+    <nav id="sivunavigointi">
+      <a href="okgHenkilökuvat.html" class="nav-kortti">
+        <h2>Henkilökuvat</h2>
+        <p>Voit selailla valmiita pohjia, hakea inspiraatiota tai tilata henkilökuvauksen.</p>
+      </a>
+
+      <a href="okgLuonto.html" class="nav-kortti">
+        <h2>Luontokuvat</h2>
+        <p>Kaipaatko uniikkia kuvastoa kotisi sisustukseen, tai kuvauttaa lempimaisemasi? Katso täältä!</p>
+      </a>
+
+      <a href="okgUrbaani.html" class="nav-kortti">
+        <h2>Urbaanit kuvat</h2>
+        <p>Oletko esimerkiksi kunnan edustaja ja teet viestintää? Täältä saat kuvaus- ja suunnitteluapua.</p>
+      </a>
+
+      <a href="okgUrheilu.html" class="nav-kortti">
+        <h2>Urheilukuvat</h2>
+        <p>Onko urheilujoukkueellasi visuaalinen sisältö kunnossa, vai kaipaatteko siihen apua?</p>
+      </a>
+
+      <a href="okgYhteystiedot.html" class="nav-kortti">
+        <h2>Yhteystiedot</h2>
+        <p>Mikäli herää mitään kysyttävää, täältä löytyy tarkemmat tiedot yhteydenottoon.</p>
+      </a>
+    </nav>
+  </footer>
+
+</body>
+</html>
